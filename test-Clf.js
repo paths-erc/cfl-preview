@@ -18,6 +18,7 @@ const formatColophon = (text, toOl) => {
     text = tag2link(text);
     text = stripPathsTags(text);
     text = trimText(text);
+    text = trimText(text);
 
     if (toOl){
         text = ml2ol(text);
