@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>Hello, world!</title>
+    <style>
+      ol {
+        list-style: none;
+        counter-reset: item;
+      }
+      li {
+        counter-increment: item;
+      }
+      li:before {
+        margin-left: -25px;
+        margin-right: 10px;
+        content: counter(item);
+        color: #cccccc;
+        text-align: center;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <h1>Preview Colophons</h1>
+      <div class="form-group row mt-5">
+        <label for="clf" class="col-2 col-lg-1 col-form-label">Colophon</label>
+        <div class="col-3 col-lg-1">
+          <input type="text" class="form-control" id="clf" value="1">
+        </div>
+      </div>
+
+      <pre id="orig" class="border p-1"></pre>
+      
+      
+      <div class="row">
+        <div class="col-6">
+          <pre  id="rawResult" class="border p-1 m-1" id="rawResult"></pre>
+        </div>
+        <div class="col-6">
+            <div class="border p-1 m-1" id="formattedResult" style="font-family: Antinoou;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./test-Clf.js"></script>
+    <script src="./bootstrap.js"></script>
+    
+  </body>
+</html>
