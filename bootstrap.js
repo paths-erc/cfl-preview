@@ -1,0 +1,21 @@
+const loadClf = id => {
+    fetch(`https://raw.githubusercontent.com/paths-erc/coptic-texts/master/colophons/paths.colophons.${id}.xml`)
+    .then( response => response.text() )
+    .then ( str => {
+      const clfhtml = str.match(/<body>(.*)<\/body>/si)[1];
+      document.getElementById('orig').textContent = clfhtml;
+      document.getElementById('rawResult').innerHTML = formatColophon(clfhtml);
+      document.getElementById('formattedResult').innerHTML = formatColophon(clfhtml, true);
+    });
+  };
+
+  document.getElementById('clf').onkeypress = (e) => {
+    if (!e) e = window.event;
+    const keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+      loadClf(document.getElementById('clf').value);
+      return false;
+    }
+  }
+
+  loadClf(document.getElementById('clf').value);
