@@ -7,8 +7,8 @@ const loadClf = id => {
       document.getElementById('formattedResult').innerHTML = formatColophon(clfhtml, true);
     })
     .catch((error) => {
-      document.getElementById('orig').textContent = `Error in gettin colophon #${id}`;
-      document.getElementById('formattedResult').innerHTML = `Error in gettin colophon #${id}`;
+      document.getElementById('orig').textContent = `Error in getting colophon #${id}`;
+      document.getElementById('formattedResult').innerHTML = `Error in getting colophon #${id}`;
     });;
 };
 
